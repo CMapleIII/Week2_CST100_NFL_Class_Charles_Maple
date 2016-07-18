@@ -1,15 +1,20 @@
-
+/** Program: PlayerClass
+* File: PlayerClass.java
+* Summary: The class for the players
+* Author: Charles Maple III
+* Date: July 4, 2016 
+**/
 public class PlayerClass 
 {
+	
+	// the variables for the players stats.
+	private String team;
 	private String name;
 	private String position;
-	private String team;
 	private double height;
 	private double weight;
 	private int number;
 	private int age;
-	
-	
 	private int forcedFumbles;
 	private int interceptions;
 	private int touchDowns;
@@ -22,10 +27,10 @@ public class PlayerClass
 	private double avRushingYards;
 	private double rating;
 	
-
-	public String getName()
+	// The setters and getters for the players stats.
+	public String getTeam()
 	{
-		return name;
+		return team;
 	}
 	
 	public String getPos()
@@ -33,9 +38,9 @@ public class PlayerClass
 		return position;
 	}
 	
-	public String getTeam()
+	public String getName()
 	{
-		return team;
+		return name;
 	}
 	
 	public double getHeight()
@@ -193,7 +198,7 @@ public class PlayerClass
 		tackles = playerTackles;
 	}
 	
-	public void setAvRuchingYds(double playerAverageRushingYards)
+	public void setAvRushingYds(double playerAverageRushingYards)
 	{
 		avRushingYards = playerAverageRushingYards;
 	}
@@ -201,5 +206,18 @@ public class PlayerClass
 	public void setRating(double playerRating)
 	{
 		rating = playerRating;
+	}
+	//constructors
+	PlayerClass() 
+	{
+		
+	}
+	
+	PlayerClass(String team, String name, String position, double height, 
+			double weight,int number, int age, int forcedFumbles, int interceptions, 
+			int touchdowns, int carries, int receptions, double yards, double averageYards, 
+			double sacks, double tackles, double avRushingYards, double rating) 
+	{
+		
 	}
 }
