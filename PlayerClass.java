@@ -2,45 +2,45 @@
 * File: PlayerClass.java
 * Summary: The class for the players
 * Author: Charles Maple III
-* Date: July 4, 2016 
+* Date: Updated July 23, 2016 
 **/
-public class PlayerClass 
+public abstract class PlayerClass 
 {
-	
 	// the variables for the players stats.
-	private String team;
-	private String name;
-	private String position;
-	private double height;
-	private double weight;
-	private int number;
-	private int age;
-	private int forcedFumbles;
-	private int interceptions;
-	private int touchDowns;
-	private int carries;
-	private int receptions;
-	private double yards;
-	private double averageYards;
-	private double sacks;
-	private double tackles;
-	private double avRushingYards;
-	private double rating;
+	protected String team = "";
+	protected String name = "";
+	protected String position = "";
+	protected double height;
+	protected double weight;
+	protected int jerseyNumber;
+	protected int age;
+
 	
-	// The setters and getters for the players stats.
+	PlayerClass(String team, String name, String position, double height, 
+			double weight,int jerseyNumber, int age) 
+	{
+		this.team = team;
+		this.name = name;
+		this.position = position;
+		this.height = height;
+		this.weight = weight;
+		this.jerseyNumber = jerseyNumber;
+		this. age = age;
+	}
+		//Getters
 	public String getTeam()
 	{
 		return team;
 	}
 	
-	public String getPos()
-	{
-		return position;
-	}
-	
 	public String getName()
 	{
 		return name;
+	}
+	
+	public String getPosition()
+	{
+		return position;
 	}
 	
 	public double getHeight()
@@ -53,84 +53,29 @@ public class PlayerClass
 		return weight;
 	}
 	
-	public int getNumber()
+	public int getJerseyNumber()
 	{
-		return number;
+		return jerseyNumber;
 	}
 	
 	public int getAge()
 	{
 		return age;
 	}
-	
-	public int getFumbles()
+		//Setters
+	public void setTeam(String playerTeam)
 	{
-		return forcedFumbles;
+		team = playerTeam;
 	}
 	
-	public int getInterceptions()
-	{
-		return interceptions;
-	}
-	
-	public int gettouchDowns()
-	{
-		return touchDowns;
-	}
-	
-	public int getCarries()
-	{
-		return carries;
-	}
-	
-	public int getReceptions()
-	{
-		return receptions;
-	}
-	
-	public double getYards()
-	{
-		return yards;
-	}
-
-	public double getaverageYards()
-	{
-		return averageYards;
-	}
-
-	public double getSacks()
-{
-	return sacks;
-}
-
-	public double getTackles()
-	{
-		return tackles;
-	}
-	
-	public double getaverageRushingYards()
-	{
-		return avRushingYards;
-	}
-	
-	public double getRating()
-	{
-		return rating;
-	}
-	
-	public void  setName(String playerName)
+	public void setName(String playerName)
 	{
 		name = playerName;
 	}
 	
-	public void setPosition(String playerPosition)
+	public void setPosition(String playerPos)
 	{
-		position = playerPosition;
-	}
-	
-	public void setTeam(String playerTeam)
-	{
-		team = playerTeam;
+		position = playerPos;
 	}
 	
 	public void setHeight(double playerHeight)
@@ -143,81 +88,13 @@ public class PlayerClass
 		weight = playerWeight;
 	}
 	
-	public void setNumber(int playerNumber)
+	public void setJersyNumber(int plyrJerseyNum)
 	{
-		number = playerNumber;
+		jerseyNumber = plyrJerseyNum;
 	}
 	
 	public void setAge(int playerAge)
 	{
 		age = playerAge;
-	}
-	
-	public void setFumbles(int playerFumbles)
-	{
-	forcedFumbles = playerFumbles;
-	}
-	
-	public void setInterceptions(int playerInterceptions)
-	{
-		interceptions = playerInterceptions;
-	}
-	
-	public void setTouchdowns(int playerTouchdowns)
-	{
-		touchDowns = playerTouchdowns;
-	}
-	
-	public void setCarries(int playerCarries)
-	{
-		carries = playerCarries;
-	}
-	
-	public void setReceptions(int playerReceptions)
-	{
-		receptions = playerReceptions;
-	}
-	
-	public void setYards(double playerYards)
-	{
-		yards = playerYards;
-	}
-	
-	public void setAvYards(double playerAverageYards)
-	{
-		averageYards = playerAverageYards;
-	}
-	
-	public void setSacks(double playerSacks)
-	{
-		sacks = playerSacks;
-	}
-	
-	public void setTackles(double playerTackles)
-	{
-		tackles = playerTackles;
-	}
-	
-	public void setAvRushingYds(double playerAverageRushingYards)
-	{
-		avRushingYards = playerAverageRushingYards;
-	}
-	
-	public void setRating(double playerRating)
-	{
-		rating = playerRating;
-	}
-	//constructors
-	PlayerClass() 
-	{
-		
-	}
-	
-	PlayerClass(String team, String name, String position, double height, 
-			double weight,int number, int age, int forcedFumbles, int interceptions, 
-			int touchdowns, int carries, int receptions, double yards, double averageYards, 
-			double sacks, double tackles, double avRushingYards, double rating) 
-	{
-		
 	}
 }
