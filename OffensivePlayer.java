@@ -68,4 +68,25 @@ public class OffensivePlayer extends PlayerClass
 	{
 		averageYards = plyrAverageYds;
 	}
+	
+	@Override
+	
+	public String getTeam()
+	{
+		return team;
+	}
+	public void setTeam(String playerTeam)
+	{
+		team = playerTeam;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setName(String playerName)
+	{
+		name = playerName;
+	}
 }
