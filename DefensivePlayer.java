@@ -5,7 +5,9 @@
 * Date: Updated July 23, 2016 
 **/
 
-public class DefensivePlayer extends PlayerClass
+import java.util.Random;
+
+public class DefensivePlayer extends PlayerClass implements Celebrator
 {
 	protected int forcedFumbles = 0;
 	protected int interceptions = 0;
@@ -17,6 +19,15 @@ public class DefensivePlayer extends PlayerClass
 	{
 		super(team, name, position, height, weight, jerseyNumber, age);
 	}
+	
+	public void celebrate()
+	{
+		int randCeleInt = new Random().nextInt(Celebrator.celebrationTypes.length);
+		String randCele = (Celebrator.celebrationTypes[randCeleInt]);
+		
+		System.out.println(this.name + " " + randCele + " to celebrate being drafted!");
+	}
+	
 		//getters
 	public int getForcedFumbles()
 	{

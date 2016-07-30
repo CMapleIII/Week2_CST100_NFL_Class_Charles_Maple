@@ -2,9 +2,10 @@
 * File: PlayerClass.java
 * Summary: The class for the players
 * Author: Charles Maple III
-* Date: Updated July 23, 2016 
+* Date: Updated July 30, 2016 
 **/
-public abstract class PlayerClass 
+
+public abstract class PlayerClass implements Celebrator
 {
 	// the variables for the players stats.
 	protected String team = "";
@@ -14,7 +15,6 @@ public abstract class PlayerClass
 	protected double weight;
 	protected int jerseyNumber;
 	protected int age;
-
 	
 	PlayerClass(String team, String name, String position, double height, 
 			double weight,int jerseyNumber, int age) 
@@ -27,6 +27,12 @@ public abstract class PlayerClass
 		this.jerseyNumber = jerseyNumber;
 		this. age = age;
 	}
+	
+	public void celebrate()
+	{
+		
+	}
+	
 		//Getters
 	public String getTeam()
 	{

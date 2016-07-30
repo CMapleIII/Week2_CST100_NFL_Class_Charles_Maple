@@ -1,11 +1,13 @@
+import java.util.Random;
+
 /** Program: OffensivePlayer
 * File: OffensivePlayer.java
 * Summary: The class to hold offensive player stats.
 * Author: Charles Maple III
-* Date: Updated July 23, 2016 
+* Date: Updated July 30, 2016 
 **/
 
-public class OffensivePlayer extends PlayerClass
+public class OffensivePlayer extends PlayerClass implements Celebrator
 {
 	protected int touchDowns = 0;
 	protected int carries = 0;
@@ -18,6 +20,15 @@ public class OffensivePlayer extends PlayerClass
 	{
 		super(team, name, position, height, weight, jerseyNumber, age);
 	}
+	
+	public void celebrate()
+	{
+		int randCeleInt = new Random().nextInt(Celebrator.celebrationTypes.length);
+		String randCele = (Celebrator.celebrationTypes[randCeleInt]);
+		
+		System.out.println(this.name + " " + randCele + " to celebrate being drafted!");
+	}
+	
 		//getters
 	public int getTouchDowns()
 	{
