@@ -11,25 +11,20 @@ public abstract class PlayerClass implements Celebrator
 	protected String team = "";
 	protected String name = "";
 	protected String position = "";
-	protected double height;
-	protected double weight;
 	protected int jerseyNumber;
-	protected int age;
 	
-	PlayerClass(String team, String name, String position, double height, 
-			double weight,int jerseyNumber, int age) 
+	PlayerClass(String team, String name, String position, int jerseyNumber) 
 	{
 		this.team = team;
 		this.name = name;
 		this.position = position;
-		this.height = height;
-		this.weight = weight;
 		this.jerseyNumber = jerseyNumber;
-		this. age = age;
 	}
 	
-	public void celebrate()
+        @Override
+	public String celebrate()
 	{
+		return name;
 		
 	}
 	
@@ -49,25 +44,11 @@ public abstract class PlayerClass implements Celebrator
 		return position;
 	}
 	
-	public double getHeight()
-	{
-		return height;
-	}
-	
-	public double getWeight()
-	{
-		return weight;
-	}
-	
 	public int getJerseyNumber()
 	{
 		return jerseyNumber;
 	}
 	
-	public int getAge()
-	{
-		return age;
-	}
 		//Setters
 	public void setTeam(String playerTeam)
 	{
@@ -84,23 +65,8 @@ public abstract class PlayerClass implements Celebrator
 		position = playerPos;
 	}
 	
-	public void setHeight(double playerHeight)
-	{
-		height = playerHeight;
-	}
-	
-	public void setWeight(double playerWeight)
-	{
-		weight = playerWeight;
-	}
-	
 	public void setJersyNumber(int plyrJerseyNum)
 	{
 		jerseyNumber = plyrJerseyNum;
-	}
-	
-	public void setAge(int playerAge)
-	{
-		age = playerAge;
 	}
 }

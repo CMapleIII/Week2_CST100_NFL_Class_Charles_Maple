@@ -14,19 +14,22 @@ public class OffensivePlayer extends PlayerClass implements Celebrator
 	protected int receptions = 0;
 	protected double avRushingYards = 0;
 	protected double averageYards = 0;
+	protected int fieldGoals = 0;
 	
 	OffensivePlayer(String team, String name, String position, double height, 
 			double weight,int jerseyNumber, int age) 
 	{
-		super(team, name, position, height, weight, jerseyNumber, age);
+		super(team, name, position, jerseyNumber);
 	}
 	
-	public void celebrate()
+        @Override
+	public String celebrate()
 	{
 		int randCeleInt = new Random().nextInt(Celebrator.celebrationTypes.length);
 		String randCele = (Celebrator.celebrationTypes[randCeleInt]);
 		
 		System.out.println(this.name + " " + randCele + " to celebrate being drafted!");
+		return name;
 	}
 	
 		//getters
@@ -54,6 +57,12 @@ public class OffensivePlayer extends PlayerClass implements Celebrator
 	{
 		return averageYards;
 	}
+	
+	public int getFieldGoals()
+	{
+		return fieldGoals;
+	}
+	
 	//setters
 	public void setTouchDowns(int playerTouchDowns)
 	{
@@ -80,22 +89,30 @@ public class OffensivePlayer extends PlayerClass implements Celebrator
 		averageYards = plyrAverageYds;
 	}
 	
+	public void setFieldGoals(int playerFieldGoals)
+	{
+		fieldGoals = playerFieldGoals;
+	}
+	
 	@Override
 	
 	public String getTeam()
 	{
 		return team;
 	}
+        @Override
 	public void setTeam(String playerTeam)
 	{
 		team = playerTeam;
 	}
 	
+        @Override
 	public String getName()
 	{
 		return name;
 	}
 	
+        @Override
 	public void setName(String playerName)
 	{
 		name = playerName;

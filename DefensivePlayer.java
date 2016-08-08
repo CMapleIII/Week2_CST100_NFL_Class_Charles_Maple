@@ -14,18 +14,19 @@ public class DefensivePlayer extends PlayerClass implements Celebrator
 	protected double sacks = 0;
 	protected double tackles = 0;
 	
-	DefensivePlayer(String team, String name, String position, double height, 
-			double weight,int jerseyNumber, int age) 
+	DefensivePlayer(String team, String name, String position, int jerseyNumber) 
 	{
-		super(team, name, position, height, weight, jerseyNumber, age);
+		super(team, name, position, jerseyNumber);
 	}
 	
-	public void celebrate()
+        @Override
+	public String celebrate()
 	{
 		int randCeleInt = new Random().nextInt(Celebrator.celebrationTypes.length);
 		String randCele = (Celebrator.celebrationTypes[randCeleInt]);
 		
 		System.out.println(this.name + " " + randCele + " to celebrate being drafted!");
+		return name;
 	}
 	
 		//getters
@@ -75,16 +76,19 @@ public class DefensivePlayer extends PlayerClass implements Celebrator
 	{
 		return team;
 	}
+        @Override
 	public void setTeam(String playerTeam)
 	{
 		team = playerTeam;
 	}
 	
+        @Override
 	public String getName()
 	{
 		return name;
 	}
 	
+        @Override
 	public void setName(String playerName)
 	{
 		name = playerName;
